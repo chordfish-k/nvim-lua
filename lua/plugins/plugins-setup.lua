@@ -25,8 +25,10 @@ vim.cmd([[
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim' -- 主题
+  use 'kyazdani42/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',  -- 状态栏
+  
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }  -- 状态栏图标
   }
   use {
@@ -43,7 +45,7 @@ return require('packer').startup(function(use)
     "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
     "neovim/nvim-lspconfig"
   }
-    -- 自动补全
+  -- 自动补全
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
   use "L3MON4D3/LuaSnip" -- snippets引擎，不装这个自动补全会出问题
@@ -54,7 +56,7 @@ return require('packer').startup(function(use)
   use "numToStr/Comment.nvim" -- gcc和gc注释
   use "windwp/nvim-autopairs" -- 自动补全括号
 
-  use "akinsho/bufferline.nvim" -- buffer分割线
+  use {"akinsho/bufferline.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true }} -- buffer分割线
   use "lewis6991/gitsigns.nvim" -- 左则git提示
 
   use {

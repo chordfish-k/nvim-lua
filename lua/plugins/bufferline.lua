@@ -10,6 +10,10 @@ require("bufferline").setup {
             text = "File Explorer",
             highlight = "Directory",
             text_align = "left"
-        }}
+        }},
+        show_buffer_icons = true,    -- 启用 buffer 图标
+
     }
 }
+
+
