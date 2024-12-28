@@ -28,7 +28,6 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- toggleterm
 keymap.set("n", "<C-T>", ":ToggleTerm<CR>")
 keymap.set("t", "<C-T>", "<C-\\><C-n>:ToggleTerm<CR>")
-
 -- 快捷命令
 keymap.set("n", "<leader>s", ":w<CR>")
 keymap.set("n", "<leader>q", ":q<CR>")

@@ -17,6 +17,11 @@ require("mason-lspconfig").setup({
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("lspconfig").lua_ls.setup {
+local config = require("lspconfig")
+config.lua_ls.setup {
+  capabilities = capabilities,
+}
+
+config.clangd.setup {
   capabilities = capabilities,
 }

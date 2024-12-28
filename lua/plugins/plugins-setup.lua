@@ -60,20 +60,27 @@ return require('packer').startup(function(use)
   use "lewis6991/gitsigns.nvim" -- 左则git提示
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
+    'nvim-telescope/telescope.nvim',  -- 文件检索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use {"akinsho/toggleterm.nvim", tag = '*'}
-  
   -- nvim v0.7.2
   use({
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
-    requires = {
+    requires = { 
         "nvim-lua/plenary.nvim",
     },
   })
+  
+  -- 调试器
+  use "ravenxrz/nvim-dap"
+  use "theHamsta/nvim-dap-virtual-text"
+  use 'nvim-neotest/nvim-nio'
+  use {"rcarriga/nvim-dap-ui", tag="v3.9.0"}
+  use "nvim-telescope/telescope-dap.nvim"
+
   if packer_bootstrap then
     require('packer').sync()
   end

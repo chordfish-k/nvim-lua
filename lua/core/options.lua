@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 -- 行号
-opt.relativenumber = true
+opt.relativenumber = false
 opt.number = true
 
 -- 缩进
@@ -17,10 +17,10 @@ opt.wrap = false
 opt.cursorline = true
 
 -- 启用鼠标
-opt.mouse:append("a")
+opt.mouse = "a"
 
 -- 系统剪贴板
-opt.clipboard:append("unnamedplus")
+opt.clipboard = "unnamedplus"
 
 -- 默认新窗口右和下
 opt.splitright = true

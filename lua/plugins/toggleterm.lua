@@ -12,6 +12,8 @@
     direction = "float",
     close_on_exit = true, -- close the terminal window when the process exits
     shell = nil, -- change the default shell
+    autochdir = true,
+    dir = "~",
     float_opts = {
       border = "rounded",
       winblend = 0,
