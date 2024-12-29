@@ -1,8 +1,5 @@
 require("plugins.plugins-setup")
 
-require("core.options")
-require("core.keymaps")
-
 -- 插件
 require("plugins.lualine")
 require("plugins/nvim-tree")
@@ -16,3 +13,8 @@ require("plugins/gitsigns")
 require("plugins/telescope")
 require("plugins.toggleterm")
 require("plugins.dap")
+require("plugins.cmake-tools")
+-- require("plugins.dashboard")
+
+require("core.options")
+require("core.keymaps")

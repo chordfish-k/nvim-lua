@@ -81,6 +81,51 @@ return require('packer').startup(function(use)
   use {"rcarriga/nvim-dap-ui", tag="v3.9.0"}
   use "nvim-telescope/telescope-dap.nvim"
 
+  -- 大纲
+  use { "hedyhli/outline.nvim", version = "1.0.0" } 
+
+  -- 自动会话
+  -- use "rmagatti/auto-session"
+
+  -- cmake-tools
+  use 'Civitasv/cmake-tools.nvim'
+
+  -- dashboard
+  -- use {
+  --   'nvimdev/dashboard-nvim',
+  --   requires = { 'nvim-tree/nvim-web-devicons' },
+  -- }
+  use {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    requires = { "nvim-tree/nvim-web-devicons" }, -- 可选图标支持
+    config = function()
+      require('dashboard').setup({
+        theme = 'hyper',  -- 可选 'doom' 或 'hyper'
+        config = {
+          header = {
+            '',
+[[⡆⣐⢕⢕⢕⢕⢕⢕⢕⢕⠅⢗⢕⢕⢕⢕⢕⢕⢕⠕⠕⢕⢕⢕⢕⢕⢕⢕⢕⢕                         ]],
+[[⢐⢕⢕⢕⢕⢕⣕⢕⢕⠕⠁⢕⢕⢕⢕⢕⢕⢕⢕⠅⡄⢕⢕⢕⢕⢕⢕⢕⢕⢕   _   _                 ]],
+[[⢕⢕⢕⢕⢕⠅⢗⢕⠕⣠⠄⣗⢕⢕⠕⢕⢕⢕⠕⢠⣿⠐⢕⢕⢕⠑⢕⢕⠵⢕  | \ | |                ]],
+[[⢕⢕⢕⢕⠁⢜⠕⢁⣴⣿⡇⢓⢕⢵⢐⢕⢕⠕⢁⣾⢿⣧⠑⢕⢕⠄⢑⢕⠅⢕  |  \| |   ___    ___   ]],
+[[⢕⢕⠵⢁⠔⢁⣤⣤⣶⣶⣶⡐⣕⢽⠐⢕⠕⣡⣾⣶⣶⣶⣤⡁⢓⢕⠄⢑⢅⢑  | . ` |  / _ \  / _ \  ]],
+[[⠍⣧⠄⣶⣾⣿⣿⣿⣿⣿⣿⣷⣔⢕⢄⢡⣾⣿⣿⣿⣿⣿⣿⣿⣦⡑⢕⢤⠱⢐  | |\  | |  __/ | (_) | ]],
+[[⢠⢕⠅⣾⣿⠋⢿⣿⣿⣿⠉⣿⣿⣷⣦⣶⣽⣿⣿⠈⣿⣿⣿⣿⠏⢹⣷⣷⡅⢐  |_| \_|  \___|  \___/  ]],
+[[⣔⢕⢥⢻⣿⡀⠈⠛⠛⠁⢠⣿⣿⣿⣿⣿⣿⣿⣿⡀⠈⠛⠛⠁⠄⣼⣿⣿⡇⢔ __      __ _            ]],
+[[⢕⢕⢽⢸⢟⢟⢖⢖⢤⣶⡟⢻⣿⡿⠻⣿⣿⡟⢀⣿⣦⢤⢤⢔⢞⢿⢿⣿⠁⢕ \ \    / /(_)           ]],
+[[⢕⢕⠅⣐⢕⢕⢕⢕⢕⣿⣿⡄⠛⢀⣦⠈⠛⢁⣼⣿⢗⢕⢕⢕⢕⢕⢕⡏⣘⢕  \ \  / /  _  _ __ ___  ]],
+[[⢕⢕⠅⢓⣕⣕⣕⣕⣵⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣷⣕⢕⢕⢕⢕⡵⢀⢕⢕   \ \/ /  | || '_ ` _ \ ]],
+[[⢑⢕⠃⡈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢃⢕⢕⢕    \  /   | || | | | | |]],
+[[⣆⢕⠄⢱⣄⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢁⢕⢕⠕⢁     \/    |_||_| |_| |_|]],
+[[⣿⣦⡀⣿⣿⣷⣶⣬⣍⣛⣛⣛⡛⠿⠿⠿⠛⠛⢛⣛⣉⣭⣤⣂⢜⠕⢑⣡⣴⣿                         ]],
+           '',
+          },    
+        },
+      })
+    end,
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end
